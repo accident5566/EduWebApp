@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>学生管理</title>
+<script type="application/javascript">
+
+        $.ajax(function(){
+            type:post;
+            url="student/remove/{studentId}";
+            success:function(responseData){
+                if("0000"==responseData.status)
+                location.href="stu_manage.html";
+            }
+        })
+    }
+</script>
+
+</head>
+<body>
+<div>
+<tr>
+    <td>学号</td>
+    <td>学生姓名</td>
+    <td>年级</td>
+    <td>操作</td>
+</tr>
+</div>
+    <div>
+    <tr>
+        <td>{stu.studentId}</td>
+        <td>{stu.studentName}</td>
+        <td>{stu.gender}</td>
+        <td>
+            <a href="stu_edit.html">编辑</a>
+            <a href=# onclick="" id="high">删除</a>
+        </td>
+    </tr>
+</div>
+</body>
+</html>

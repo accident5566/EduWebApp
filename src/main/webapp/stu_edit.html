@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编辑页面</title>
+<script type="application/javascript"></script>
+$("#cancel").click(function(){
+    location.href="stu_manage.html"
+    })
+</head>
+
+<body>
+<form action="student/update.do">
+<ul>
+<li>学号：<input id="stuId" name="stuId" type="text" value="${studentId}"></li>
+    <li>姓名：<input id="stuName" name="stuName" type="text" value="${studentName}"></li>
+    <li>年级：<input id="stuGender" name="stuGender" type="text" value="${gender}"></li>
+</ul>
+<ul>
+    <li>
+        <input id="sure" type="submit" value="确定">
+        <input id="cancel" type="button" value="取消">
+    </li>
+<li>
+    <a href="stu_add.html">添加</a>
+</li>
+</ul>
+</form>
+</body>
+</html>
